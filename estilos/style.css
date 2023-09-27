@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+:root {
+    --cor00: #2d6462;
+    --cor01: #49a09d;
+    --cor02: #6cd3cf;
+    --cor03: #5f2c82;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: var(--cor03);
+    width: 100vw;
+    height: 100vh;
+}
+
+main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+main > section#login {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 510px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.700);
+    overflow: hidden;
+
+    transform: translate(-50%, -50%);
+    transition: width .3s, height .3s;
+    transition-timing-function: ease;
+}
+
+section#login > div#imagem {
+    display: block;
+    background-image: url('../imagens/background.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    width: 100%;
+    height: 40%;
+}
+
+section#login > div#formulario {
+    display: block;
+    padding: 10px;
+}
+
+div#formulario > h1 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.411);
+}
+
+div#formulario > p {
+    text-align: justify;
+    font-size: 0.8em;
+    margin-bottom: 5px;
+}
+
+form > div.campo {
+    background-color: var(--cor03);
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+form > div.campo > span {
+    text-align: center;
+    color: white;
+    padding: 5px;
+    width: 40px;
+    height: 100%;
+
+    transform: translateY(2px);
+}
+
+form > div.campo > input {
+    background-color: #84d3d0;
+    border-radius: 10px;
+    border: none;
+    width: calc(100% - 47px);
+    padding: 5px;
+
+    transform: translateY(-3px);
+}
+
+form > div.campo > input:focus-within {
+    background-color: white;
+}
+
+form > div.campo > label {
+    display: none;
+}
+
+div#formulario > form > input[type=submit] {
+    display: block;
+    background-color: var(--cor01);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    margin: 5px 0px;
+    width: 100%;    
+    height: 40px;
+}
+
+div#formulario > form > input[type=submit]:hover {
+    background-color: var(--cor00);
+}
+
+form > a.botao {
+    display: block;
+    background-color: white;
+    border: 2px solid var(--cor01);
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--cor01);
+    width: 100%;
+    height: 40px;
+    text-align: center;
+}
+
+form > a.botao:hover {
+    background-color: var(--cor02);
+}
+
+form > a.botao > span {
+    margin: 0px 5px;
+    transform: translateY(8px);
+}
